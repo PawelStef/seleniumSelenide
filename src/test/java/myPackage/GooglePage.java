@@ -1,4 +1,4 @@
-package Mypackage;
+package myPackage;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;

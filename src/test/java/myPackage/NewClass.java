@@ -1,9 +1,6 @@
-package Mypackage;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
+package myPackage;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -15,11 +12,14 @@ public class NewClass {
 
 
     @Test
-    public void userCanSearch() {
-        open("https://www.google.com/");
+    public void userCanSearch() throws InterruptedException {
+        open("https://www.w3schools.com/cssref/css_selectors.asp");
         new GooglePage().searchFor("selenide");
         SearchResultsPage resultsPage = new SearchResultsPage();
         resultsPage.getResult(0).shouldHave(text("Selenide: concise UI tests in Java"));
+
+  //      assert("//[@id]");
+//        resultsPage.getResult(1).shouldHave(text("Selenide - Concise UI Tests in Java - Methods & Tools"));
 
 
 //        $(By.name("user.name")).setValue("johny");
